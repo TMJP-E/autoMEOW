@@ -1,0 +1,10 @@
+# Cargo auto-update dependencies.
+# Check if any dependencies are outdated or create vulnerabilities while on test branch.
+# This is done since dev has constant changes, test is more stable before it is released.
+# Should exclude testing dependencies in the future.
+version: 2
+updates:
+  - package-ecosystem: "cargo" # See documentation for possible values
+    directory: "/" # Location of package manifests
+    schedule:
+      interval: "weekly"
